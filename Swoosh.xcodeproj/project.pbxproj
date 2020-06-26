@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		303AF20024A251D400A11D93 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303AF1FF24A251D400A11D93 /* BorderButton.swift */; };
+		303AF20424A4F9E800A11D93 /* LeagueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303AF20324A4F9E800A11D93 /* LeagueVC.swift */; };
+		303AF20624A4FA0700A11D93 /* SkillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303AF20524A4FA0700A11D93 /* SkillVC.swift */; };
+		303AF20824A61C5800A11D93 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303AF20724A61C5800A11D93 /* PlayerModel.swift */; };
 		30FE83E224A2462100240C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FE83E124A2462100240C3F /* AppDelegate.swift */; };
 		30FE83E424A2462100240C3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FE83E324A2462100240C3F /* SceneDelegate.swift */; };
 		30FE83E624A2462100240C3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FE83E524A2462100240C3F /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		303AF1FF24A251D400A11D93 /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		303AF20324A4F9E800A11D93 /* LeagueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueVC.swift; sourceTree = "<group>"; };
+		303AF20524A4FA0700A11D93 /* SkillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillVC.swift; sourceTree = "<group>"; };
+		303AF20724A61C5800A11D93 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		30FE83DE24A2462100240C3F /* Swoosh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swoosh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FE83E124A2462100240C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30FE83E324A2462100240C3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		303AF20124A4F91200A11D93 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30FE83E524A2462100240C3F /* ViewController.swift */,
+				303AF20324A4F9E800A11D93 /* LeagueVC.swift */,
+				303AF20524A4FA0700A11D93 /* SkillVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		303AF20224A4F93500A11D93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				303AF20724A61C5800A11D93 /* PlayerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		30FE83D524A2462100240C3F = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +90,11 @@
 		30FE83E024A2462100240C3F /* Swoosh */ = {
 			isa = PBXGroup;
 			children = (
+				303AF20224A4F93500A11D93 /* Model */,
+				303AF20124A4F91200A11D93 /* Controller */,
 				303AF1FE24A2515D00A11D93 /* Views */,
 				30FE83E124A2462100240C3F /* AppDelegate.swift */,
 				30FE83E324A2462100240C3F /* SceneDelegate.swift */,
-				30FE83E524A2462100240C3F /* ViewController.swift */,
 				30FE83E724A2462100240C3F /* Main.storyboard */,
 				30FE83EA24A2462600240C3F /* Assets.xcassets */,
 				30FE83EC24A2462600240C3F /* LaunchScreen.storyboard */,
@@ -149,9 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303AF20424A4F9E800A11D93 /* LeagueVC.swift in Sources */,
 				30FE83E624A2462100240C3F /* ViewController.swift in Sources */,
+				303AF20824A61C5800A11D93 /* PlayerModel.swift in Sources */,
 				30FE83E224A2462100240C3F /* AppDelegate.swift in Sources */,
 				30FE83E424A2462100240C3F /* SceneDelegate.swift in Sources */,
+				303AF20624A4FA0700A11D93 /* SkillVC.swift in Sources */,
 				303AF20024A251D400A11D93 /* BorderButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

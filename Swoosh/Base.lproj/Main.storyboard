@@ -41,6 +41,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="npf-SZ-tQ3" kind="show" id="EFH-8e-ol3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYw-i5-JH3">
                                 <rect key="frame" x="78.666666666666686" y="235" width="257" height="36"/>
@@ -89,19 +92,19 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="M6j-Vc-Nm1">
             <objects>
-                <viewController id="npf-SZ-tQ3" sceneMemberID="viewController">
+                <viewController id="npf-SZ-tQ3" customClass="LeagueVC" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3KZ-Vm-r6b">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desiredLeagueBG" translatesAutoresizingMaskIntoConstraints="NO" id="ZIw-Vh-Bxu">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hdI-lT-fdO">
-                                <rect key="frame" x="16" y="260.66666666666669" width="382" height="285.00000000000006"/>
+                                <rect key="frame" x="16" y="216.66666666666663" width="382" height="285"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkF-99-gat" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="75"/>
@@ -113,9 +116,12 @@
                                         <state key="normal" title="Men's">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="npf-SZ-tQ3" eventType="touchUpInside" id="3ci-pQ-4fC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n26-FQ-dpj" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="105" width="382" height="75"/>
+                                        <rect key="frame" x="0.0" y="105.00000000000003" width="382" height="75"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="xFk-7f-jrh"/>
@@ -124,9 +130,12 @@
                                         <state key="normal" title="Women's">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="npf-SZ-tQ3" eventType="touchUpInside" id="sLH-Ev-Kvz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4D-gb-vxh" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="210" width="382" height="75"/>
+                                        <rect key="frame" x="0.0" y="210.00000000000003" width="382" height="74.999999999999972"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="YCY-Wz-4oL"/>
@@ -135,11 +144,14 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="npf-SZ-tQ3" eventType="touchUpInside" id="HeM-nf-9gW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="6ID-gy-v3N">
-                                <rect key="frame" x="0.0" y="64" width="414" height="111.66666666666669"/>
+                                <rect key="frame" x="0.0" y="20.000000000000007" width="414" height="111.66666666666669"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="drO-RD-W2L">
                                         <rect key="frame" x="147.66666666666666" y="0.0" width="118.99999999999997" height="20"/>
@@ -156,8 +168,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZZ-qm-Pem" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
-                                <rect key="frame" x="16" y="770" width="382" height="72"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZZ-qm-Pem" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
+                                <rect key="frame" x="16" y="716" width="382" height="72"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="vGE-mP-edu"/>
@@ -166,6 +178,20 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="npf-SZ-tQ3" eventType="touchUpInside" id="LX6-nv-yww"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLA-dD-Sxh">
+                                <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Sc4-Yu-BTz"/>
+                                    <constraint firstAttribute="width" constant="40" id="oR0-rS-cIY"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="c5E-s3-RNi" kind="unwind" unwindAction="unwendFromSkillVCWithUnwindSegue:" id="lv6-EK-eVW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -177,33 +203,41 @@
                             <constraint firstItem="6ID-gy-v3N" firstAttribute="leading" secondItem="lwO-Gm-7ko" secondAttribute="leading" id="LHF-yv-B44"/>
                             <constraint firstItem="ZIw-Vh-Bxu" firstAttribute="trailing" secondItem="lwO-Gm-7ko" secondAttribute="trailing" id="MWc-DY-yAM"/>
                             <constraint firstItem="ZIw-Vh-Bxu" firstAttribute="leading" secondItem="lwO-Gm-7ko" secondAttribute="leading" id="Sk7-Oy-syZ"/>
+                            <constraint firstItem="pLA-dD-Sxh" firstAttribute="top" secondItem="lwO-Gm-7ko" secondAttribute="top" constant="10" id="WLq-cq-3Ye"/>
                             <constraint firstItem="lwO-Gm-7ko" firstAttribute="bottom" secondItem="fZZ-qm-Pem" secondAttribute="bottom" constant="20" id="X1r-0D-xWP"/>
                             <constraint firstItem="hdI-lT-fdO" firstAttribute="leading" secondItem="lwO-Gm-7ko" secondAttribute="leading" constant="16" id="aaR-b4-sDw"/>
                             <constraint firstItem="ZIw-Vh-Bxu" firstAttribute="top" secondItem="lwO-Gm-7ko" secondAttribute="top" id="bvm-Tp-vBH"/>
+                            <constraint firstItem="pLA-dD-Sxh" firstAttribute="leading" secondItem="lwO-Gm-7ko" secondAttribute="leading" id="fmC-Oo-mmu"/>
                             <constraint firstItem="6ID-gy-v3N" firstAttribute="trailing" secondItem="lwO-Gm-7ko" secondAttribute="trailing" id="g6y-Cv-SYC"/>
                             <constraint firstItem="hdI-lT-fdO" firstAttribute="top" secondItem="6ID-gy-v3N" secondAttribute="bottom" constant="85" id="tXb-r9-Omm"/>
                             <constraint firstItem="fZZ-qm-Pem" firstAttribute="leading" secondItem="lwO-Gm-7ko" secondAttribute="leading" constant="16" id="ybe-HO-jz4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lwO-Gm-7ko"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZVy-wx-cfE"/>
+                    <connections>
+                        <outlet property="nextBtn" destination="fZZ-qm-Pem" id="aE6-Im-b7L"/>
+                        <segue destination="TaB-or-Vzw" kind="show" identifier="skillVCSegue" id="pyN-Bd-SmV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="goO-K8-Ueg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="c5E-s3-RNi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1014.4927536231885" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="idl-aQ-NIg">
             <objects>
-                <viewController id="TaB-or-Vzw" sceneMemberID="viewController">
+                <viewController id="TaB-or-Vzw" customClass="SkillVC" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="isy-TR-PYn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="3Yq-0t-8im">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CIV-lv-vSH">
-                                <rect key="frame" x="17" y="260.66666666666669" width="380" height="75"/>
+                                <rect key="frame" x="17" y="216.66666666666666" width="380" height="74.999999999999972"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-iM-Vfp" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="175" height="75"/>
@@ -232,7 +266,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="xnz-FR-FX3">
-                                <rect key="frame" x="0.0" y="64" width="414" height="111.66666666666669"/>
+                                <rect key="frame" x="0.0" y="20.000000000000007" width="414" height="111.66666666666669"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="77o-Ms-0SJ">
                                         <rect key="frame" x="147.66666666666666" y="0.0" width="118.99999999999997" height="20"/>
@@ -250,7 +284,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9Q-fc-QYc" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
-                                <rect key="frame" x="16" y="770" width="382" height="72"/>
+                                <rect key="frame" x="16" y="716" width="382" height="72"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="q8I-IE-5tW"/>
@@ -278,6 +312,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vkK-In-j68"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sOJ-WT-3oS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8tu-pb-aes" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,6 +320,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
